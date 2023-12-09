@@ -1,0 +1,62 @@
+.container-first{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: auto;
+    border: dotted;
+    width: auto;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+.container-first button{
+    width: fit-content;
+    height: 30px;
+    font-weight: 100;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    /* border: none; */
+    background: blue;
+    cursor: pointer;
+    color: white;
+
+}
+
+.container-first form{
+    font-size: large;
+    /* display: flex;
+    flex-direction: column;
+   margin: 7px 7px 7px 7px; */
+    width: fit-content;
+}
+
+
+
+.container-second{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-height: 300px;
+    width: auto;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.table{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.table td{
+    border-style: outset;
+}
+
+.User-details{
+    font-weight: 100;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel ="stylesheet" href = "/stylesheets/panel.css"> -->
+    <link rel="stylesheet" href="/public/stylesheets/panel.css">
+    <title>ADMIN PANEL</title>
+</head>
+<body>
+    
+    <h1>ADMIN PANEL DASHBORD</h1>
+    <div class = "container-first">
+  <h2 class=>Manage API keys</h2>
+  <h3>NOTE! Changing api key might cause the bot to crash.</h3>
+  <form method="POST" action="/adminpanel/changeApiKey" id="changeKey" >
+    <label>Change your api key of the telegram bot</label>
+    <input type="text" name = "changeKey" placeholder="Enter your api key">
+    <button type="submit">Change Key</button>
+  </form>
+    </div>
+
+    <div class="container-second">
+        <h1>Current Users</h1>
+        <table class="table">
+            <tr>
+                <td>Users</td>
+                <td>ChatID</td>
+                <td>Action</td>
+            </tr>   
+            <% allData.forEach(user => { %>
+                <tr>
+                    <td class="User-details"><%= user.name %></td>
+                    <td class="User-details"><%= user.userId %></td>
+                    <td>
+                    <form method="POST" action="/adminpanel/delete/<%= user.userId %>"  style="display:inline;">
+                        <button type="submit">Delete</button>
+                      </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </table>
+    </div>
+
+    
+</body>
+</html>
