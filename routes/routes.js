@@ -16,7 +16,7 @@ passport1.authenticate('google', {
 );
 
 
-router.use("/adminpanel", ensureAuthenticated , getData);  
+router.get("/adminpanel", ensureAuthenticated , getData);  
 router.post("/adminpanel/delete/:userId" , deleteEntry);
 router.post("/adminpanel/changeApiKey" , changeApiKey);
 
